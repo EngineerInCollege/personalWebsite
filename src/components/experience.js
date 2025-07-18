@@ -6,38 +6,43 @@ import { SectionTitle } from '../theme';
 const experiences = [
   {
     id: 1,
-    title: 'Software Engineering Intern',
+    title: 'Software Engineer Intern',
     company: 'Bank of New York',
     location: 'Pittsburgh, PA',
     start: 'June 2025',
     end: 'Present',
     bullets: [
-      ''
+      'Engineering an AI‑driven support routing agent using ChatGPT‑4 LLM, integrating with xMatters on‑call REST APIs and Microsoft Teams to autonomously match employees with the correct support contact and parse troubleshooting documentation, eliminating managerial escalations and saving hundreds of hours in redirected communication.',
+      'Orchestrating production readiness across Teams and interns, automating workflows via Python-based reasoning functions and dynamic API calls.',
+      'Collaborating closely with other engineering teams to align multiple custom agents under shared integration standards, positioning the solution for company‑wide deployment.',
+      'Stack: Python, OpenAI GPT-4 API, REST API, Microsoft Graph API, Docker'
     ]
   },
   {
     id: 2,
-    title: 'DevOps Engineering Intern',
+    title: 'DevOps Engineer Intern',
     company: 'Westinghouse Electric Company',
     location: 'Cranberry, PA',
     start: 'May 2024',
     end: 'August 2024',
     bullets: [
-      'Led the migration from Subversion to Azure DevOps, streamlining the Software Development and Release Process by implementing automated testing using Python, PowerShell, and Perl scripts in a CD/CD pipeline within an Agile work environment.',
-      'Developed a scalable validation framework for Ovation databases, integrating existing test scripts, managing dependencies, and reducing runtime to approximately 5 minutes.',
-      'Enhanced a machine learning-based data analytics tool to detect and classify errors in databases, resulting in an estimated $5,000 in cost savings by improving error detection efficiency.'
+      'Spearheaded the transition from Subversion to Azure DevOps, automating the entire software development and release lifecycle by crafting Python, PowerShell, and Perl scripts to execute Git workflows within CI/CD pipelines, resulting in 5x faster deployments, reduced manual effort, and streamlined Agile delivery.',
+      'Developed a scalable validation framework for Ovation databases, integrating existing test scripts and managing dependencies like Pandas, Numpy, and Openpyxl to reduce total runtime to ~5 minutes.',
+      'Enhanced a machine-learning error detection tool for database analytics in Databricks, improving classification accuracy and generating an estimated $5K in cost savings through efficient error identification.',
+      'Stack: Python, PowerShell, Perl, Git, Pandas, Numpy, Openpyxl, Azure DevOps, Azure Pipelines, Docker, Kubernetes'
     ]
   },
   {
     id: 3,
-    title: 'Engineering Intern',
+    title: 'Software Engineer Intern',
     company: 'Greenman-Pedersen, Inc.',
     location: 'Pittsburgh, PA',
     start: 'May 2023',
     end: 'August 2023',
     bullets: [
-      'Pioneered development of a data-integrating and analyzing algorithm into a 300 level-of-detail BIM 3D modeling project for Greensburg Pump Station using Point Cloud data, achieving $12,000 company expense reduction by circumventing external vendor engagement.',
-      'Developed SOPs for Greenburg Wastewater Plant, optimizing processes and ensuring manual compliance.'
+      'Designed and implemented a data-integration algorithm into a 300-level-of-detail BIM 3D modeling project for the Greensburg Pump Station, using point-cloud data to save $12K by avoiding external vendor services.',
+      'Authored SOPs for Greensburg Wastewater Plant operations, optimizing workflows and ensuring compliance with operational standards by communicating with plant operators.',
+      'Stack: Python, MATLAB, Autodesk Revit, ArcGIS Pro'
     ]
   },
   // Add more experiences as needed....
@@ -155,10 +160,18 @@ const Details = styled.div`
   transform-origin: top center;
 `;
 
-const Bullet = styled.div`
+const List = styled.ul`
+  padding: 0;
+`
+
+const Bullet = styled.li`
   margin-top: 1vw;
   margin-left: 1vw;
   padding-bottom: 1vw;
+
+  &::marker {
+    color: ${(props) => props.theme.secondary};
+  }
 `
 
 export default function Experience() {
@@ -205,11 +218,13 @@ export default function Experience() {
                 }}>
                   <Details ref={(el) => (detailsRefs.current[exp.id] = el)}>
                     <p>Location: {exp.location}</p>
-                    {exp.bullets.map((b, idx) => (
+                    <List>
+                      {exp.bullets.map((b, idx) => (
                         <Bullet key={idx}>
                           {b}
                         </Bullet>
                       ))}
+                    </List>
                   </Details>
                 </DetailsWrapper>
               )}

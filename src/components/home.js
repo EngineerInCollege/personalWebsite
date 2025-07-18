@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { HiAcademicCap } from "react-icons/hi2";
-import myPhoto from '../images/my-photo.png'; 
+import myPhoto from '../images/my-photo.jpg'; 
 import { SectionTitle } from '../theme';
 
 const LeftSide = styled.div`
@@ -198,7 +198,7 @@ const Home = () => {
           <a href="https://github.com/EngineerInCollege" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="mailto:nji5081@psu.edu">
+          <a href="mailto:immen.negein@gmail.com">
             <FaEnvelope />
           </a>
         </SocialIcons>
@@ -222,7 +222,7 @@ const Home = () => {
               
               <p>My curiosity about blockchain technology has also grown, particularly its potential for security, transparency, and reliability on the web. To dive deeper, I created a decentralized voting platform where users can cast votes using Ethereum, with negligible gas fees. This project introduced me to Solidity and further expanded my web development skills.</p>
               
-              <p>During my internship at Westinghouse Electric Company, I worked on real-world, mission-critical data projects. I led the migration from Subversion to Azure DevOps for the software development and release processes for nuclear power plant database systems. This included integrating automated testing and CI/CD through a streamlined pipeline. Additionally, I helped develop a machine learning-based data analytics tool to detect and classify errors in databases, saving an estimated $5,000 by improving error detection efficiency—a project carried out using Databricks.</p>
+              <p>During my internship at Westinghouse Electric Company, I worked on real-world, mission-critical data projects. I led the migration from Subversion to Azure DevOps for the software development and release processes for nuclear power plant database systems. This included integrating automated testing and CI/CD through a streamlined pipeline. Additionally, I helped develop a machine learning-based data analytics tool to detect and classify errors in databases, saving an estimated $5,000 by improving error detection efficiency (a project carried out using Databricks). What I've learned in AI has paved the way for my current role as a Software Engineer Intern at Bank of New York, where I'm currently applying similar automation principles to build an AI-powered agent that dynamically routes employee queries to the right on-call person.</p>
               
               <p>Beyond academics, I stay involved in my community as the Treasurer and prior DEI Chair of <a href="https://sites.psu.edu/psuieee/"target="_blank" style={{ color: 'black' }}>Penn State's IEEE organization</a> and as a volunteer in the ICU at Allegheny Health Network. I’m a firm believer that knowledge is power, which inspires me to continually learn, share my experiences, and take on new challenges.</p>
               
@@ -230,7 +230,7 @@ const Home = () => {
             </Biography>
           ) : (
             <Biography isExiting={isAnimating}>
-              <p>Hi, I'm Negein! I'm a Computer Engineering student at Penn State with interests in hardware engineering, machine learning, blockchain technology, and teaching. Currently, my technical abilities have been honed through my role as a DevOps Engineering Intern for Westinghouse Electric Company.</p>
+              <p>Hi, I'm Negein! I'm a Computer Engineering student at Penn State with interests in hardware engineering, machine learning, blockchain technology, and teaching. Currently, my technical abilities have been honed through my role as a Software Engineer Intern for Bank of New York.</p>
 
               <p>Outside of academics, I stay involved in my community as the Treasurer for Penn State's IEEE and a volunteer in the ICU at Allegheny Health Network. I believe all knowledge is power, which drives me to continuously improve my skills, share what I've learned with others, and (as a recent personal project) learn how to play the guitar!</p>
             </Biography>

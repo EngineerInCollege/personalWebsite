@@ -22,6 +22,7 @@ const Name = styled.div`
     font-weight: bold;
     color: ${(props) => props.theme.secondary};
   }
+  cursor: pointer;
 `;
 
 const ItemBox = styled.div`
