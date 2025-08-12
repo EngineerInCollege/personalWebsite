@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components';
 import theme from './theme';
+import { Analytics } from "@vercel/analytics/react"
 
 import Navbar from './components/navbar';
 import Home from './components/home';
@@ -96,6 +97,9 @@ function App() {
 
   return (
     <AppContainer>
+
+    <Analytics/>
+
       <ThemeProvider theme={theme}>
         <Navbar
           active={activeSection}
